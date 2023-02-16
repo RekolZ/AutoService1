@@ -1,0 +1,38 @@
+﻿<Page x:Class="AutoService.View.Pages.AddEditServicePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoService.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditServicePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="0" Header="Изображение">
+            <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                <Image x:Name="ImageService" Source="/Assets/img/picture.png" Width="150"></Image>
+            </StackPanel>
+        </GroupBox>
+        
+        <GroupBox Grid.Column="1" Header="Данные">
+            
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+
+                <TextBox x:Name="TBoxCost" Margin="0 2" Text="1"></TextBox>
+                <TextBox x:Name ="TBoxTitle" Margin="0 2" Text="давай"></TextBox>
+                <TextBox x:Name ="TBoxDuration" Margin="0 2" Text="1"></TextBox>
+                <TextBox x:Name ="TBoxDescription" Margin="0 2" Text="1"></TextBox>
+                <TextBox x:Name ="TBoxDiscount" Margin="0 2" Text="1"></TextBox>
+                <Button x:Name="BtnSelectImage" Click="BtnSelectImage_Click" HorizontalAlignment="Center" Width="300">Выбрать фото</Button>
+                <Button x:Name="BtnSave" Click="BtnSave_Click" HorizontalAlignment="Center" Width="300">Сохранить</Button>
+            </StackPanel>
+        </GroupBox>
+        
+        
+    </Grid>
+</Page>

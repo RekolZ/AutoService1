@@ -1,0 +1,25 @@
+﻿<Window x:Class="AutoService.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoService"
+        mc:Ignorable="d"
+        Title="подай на 16" Height="450" Width="800"
+        Closed="WindowClosed">
+   
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Fill="{StaticResource SecondColor}"></Rectangle>
+        <Rectangle Grid.Row="2" Fill="{StaticResource SecondColor}"></Rectangle>
+
+        <Image Source="Assets/img/service_logo.png" Width="100" HorizontalAlignment="Left"></Image>
+        <Button x:Name="BtnBack" Click="BtnBackClick">назад</Button>
+        <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" Style="{StaticResource BlockHeader}"/>
+        <Frame x:Name="FrameMain" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+    </Grid>
+</Window>
