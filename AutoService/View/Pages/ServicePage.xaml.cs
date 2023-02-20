@@ -71,6 +71,7 @@ namespace AutoService.View.Pages
         {
             Service activeService = null;
             this.NavigationService.Navigate(new AddEditServicePage(activeService));
+            UpdateService();
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
@@ -78,6 +79,7 @@ namespace AutoService.View.Pages
             Button activeButton = sender as Button;
             Service activeService = activeButton.DataContext as Service;
             this.NavigationService.Navigate(new AddEditServicePage(activeService));
+            UpdateService();
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)

@@ -18,29 +18,29 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Width="150" Margin="10 0" Grid.Column="0">
                     <Label>Имя</Label>
-                    <TextBox></TextBox>
+                    <TextBox Name="FirstNameTBox"></TextBox>
                     <Label>Фамилия</Label>
-                    <TextBox></TextBox>
+                    <TextBox Name="LastNameTBox"></TextBox>
                     <Label>Отчество</Label>
-                    <TextBox></TextBox>
+                    <TextBox Name="PatronymicTBox"></TextBox>
                     <Label>Пол</Label>
-                    <ComboBox>
+                    <ComboBox Name="GenderCombo">
                         <ComboBoxItem Content="Мужчина"></ComboBoxItem>
                         <ComboBoxItem Content="Женщина"></ComboBoxItem>
                     </ComboBox>
                     <Label>Телефон</Label>
-                    <TextBox></TextBox>
+                    <TextBox Name="PhoneTBox"></TextBox>
                 </StackPanel>
                 <StackPanel  Width="150" Margin="10 0" Grid.Column="1">
                     <Label>День рождения</Label>
-                    <TextBox></TextBox>
+                    <Calendar Name="BirthdayTBox"></Calendar>
                     <Label>Почта</Label>
-                    <TextBox></TextBox>
+                    <TextBox Name="EmailTBox"></TextBox>
                     <Label>Логин</Label>
-                    <TextBox></TextBox>
+                    <TextBox Name="LoginTBox"></TextBox>
                     <Label>Пароль</Label>
-                    <PasswordBox></PasswordBox>
-                    <Button Margin="0 21 0 0">Войти</Button>
+                    <PasswordBox Name="PasswordBox"></PasswordBox>
+                    <Button Name="RegButton" Margin="0 21 0 0" Click="RegButton_Click">Войти</Button>
                 </StackPanel>
             </Grid>
             
