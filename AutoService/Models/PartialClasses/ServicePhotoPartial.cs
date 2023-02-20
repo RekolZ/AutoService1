@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace AutoService.Models
 {
@@ -17,6 +18,22 @@ namespace AutoService.Models
 
                 ;
                     }
+        }
+        public Visibility VisibilityAdminElements
+        {
+            get
+            {
+
+                if (App.CurrentUser.RoleId == 1)
+                {
+                   return Visibility.Visible;
+                }
+                else
+                {
+                    return Visibility.Hidden;
+                }
+                return VisibilityAdminElements;
+            }
         }
     }
 }

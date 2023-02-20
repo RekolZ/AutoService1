@@ -36,10 +36,11 @@ namespace AutoService.View.Pages
             if (App.CurrentUser.RoleId==1)
             {
                 BtnAddService.Visibility = Visibility.Visible;
+                //BtnDelete.Visibility = Visibility.Visible;
             }
             else
             {
-                BtnAddService.Visibility = Visibility.Hidden;
+                BtnAddService.Visibility = Visibility.Collapsed;
             }
             UpdateService();
         }

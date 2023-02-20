@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AutoService.Models;
+using System.Text.RegularExpressions;
 
 namespace AutoService.View.Pages
 {
@@ -32,32 +33,41 @@ namespace AutoService.View.Pages
         private void RegButton_Click(object sender, RoutedEventArgs e)
         {
             if (GenderCombo.SelectedIndex == 0)
-                genderCode = "м";
+                genderCode = "1";
             else
-                genderCode = "ж";
-            var client = new Client()
+                genderCode = "2";
+
+            string regex = @"(?=.*[0 - 9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}";
+            if (Regex.IsMatch(PasswordBox.Password, regex, RegexOptions.IgnoreCase))
             {
-                LastName = LastNameTBox.Text,
-                FirstName = FirstNameTBox.Text,
-                Patronymic = PatronymicTBox.Text,
-                Phone = PhoneTBox.Text,
-                Email = EmailTBox.Text,
-                PhotoPath = " "
-                //GenderCode = genderCode,
-                //RegistrationDate = 
-            };
-            
-            var user = new User()
-            {
-                Login = LoginTBox.Text,
-                Password = PasswordBox.Password,
-                RoleId = 2
-            };
-            //он делает id нулевым и из за этого ошибка
-            db.context.User.Add(user);
-            db.context.Client.Add(client);
-            db.context.SaveChanges();
-            this.NavigationService.Navigate(new LoginPage());
+                var client = new Client()
+                {
+                    LastName = LastNameTBox.Text,
+                    FirstName = FirstNameTBox.Text,
+                    Patronymic = PatronymicTBox.Text,
+                    Phone = PhoneTBox.Text,
+                    Email = EmailTBox.Text,
+                    PhotoPath = " ",
+                    GenderCode = genderCode,
+                    Birthday = BirthdayCalendar.SelectedDate,
+                    RegistrationDate = DateTime.Now,
+                };
+
+                var user = new User()
+                {
+                    Login = LoginTBox.Text,
+                    Password = PasswordBox.Password,
+                    RoleId = 2
+                };
+                //он делает id нулевым и из за этого ошибка
+                db.context.User.Add(user);
+                db.context.Client.Add(client);
+                db.context.SaveChanges();
+                this.NavigationService.Navigate(new LoginPage());
+            }
+            else
+                MessageBox.Show("ВЫ НУБЫ");
+           
         }
     }
 }

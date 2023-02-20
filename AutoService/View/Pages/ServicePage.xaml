@@ -43,7 +43,7 @@
                         <Border BorderBrush="{StaticResource ColorAccent}"
                                 CornerRadius="15" Padding="5"
                                 Background="{Binding BackColor}">
-                            <Grid>
+                            <Grid Width="500" Height="100">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="100"></ColumnDefinition>
                                     <ColumnDefinition Width="*"/>
@@ -66,10 +66,10 @@
                                                    Visibility="{Binding DiscountVisibility}"
                                                    HorizontalAlignment="Left"></TextBlock>
                                     <StackPanel Orientation="Horizontal">
-                                        <Button Content="Редактировать" Name="BtnEdit"
+                                    <Button Content="Редактировать" Name="BtnEdit" Visibility="{Binding AdminControlsVisibility}"
                                                 Click="BtnEdit_Click"></Button>
-                                        <Button Content="Удалить" Name="BtnDelete"
-                                                Click="BtnDelete_Click"></Button>
+                                        <Button Content="Удалить" Name="BtnDelete" 
+                                                Click="BtnDelete_Click" Visibility="{Binding AdminControlsVisibility}"></Button>
                                     </StackPanel>
                                 </StackPanel>
                             </Grid>

@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:AutoService.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Авторизацмя">
+      Title="Авторизация">
+    
     <Page.Resources>
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="-20 0 1 0"></Setter>

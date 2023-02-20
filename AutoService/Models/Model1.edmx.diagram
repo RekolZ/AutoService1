@@ -5,27 +5,25 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="04cc6795b9074270893daacb569c28d5" Name="Diagram1" ZoomLevel="64">
-        <EntityTypeShape EntityType="AutoServiceModel.Client" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="AutoServiceModel.Client" Width="1.5" PointX="0.75" PointY="16.5" />
         <EntityTypeShape EntityType="AutoServiceModel.ClientService" Width="1.5" PointX="3" PointY="9.125" />
         <EntityTypeShape EntityType="AutoServiceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="9.625" />
-        <EntityTypeShape EntityType="AutoServiceModel.Gender" Width="1.5" PointX="1.5" PointY="13" />
+        <EntityTypeShape EntityType="AutoServiceModel.Gender" Width="1.5" PointX="1.5" PointY="21.5" />
         <EntityTypeShape EntityType="AutoServiceModel.Manufacturer" Width="1.5" PointX="0.75" PointY="2.625" />
         <EntityTypeShape EntityType="AutoServiceModel.Product" Width="1.5" PointX="3" PointY="1.875" />
         <EntityTypeShape EntityType="AutoServiceModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="5.75" />
-        <EntityTypeShape EntityType="AutoServiceModel.ProductSale" Width="1.5" PointX="5.25" PointY="2.375" />
         <EntityTypeShape EntityType="AutoServiceModel.Role" Width="1.5" PointX="7.75" PointY="1" />
-        <EntityTypeShape EntityType="AutoServiceModel.Service" Width="1.5" PointX="0.75" PointY="16.25" />
-        <EntityTypeShape EntityType="AutoServiceModel.ServicePhoto" Width="1.5" PointX="1.5" PointY="19.875" />
-        <EntityTypeShape EntityType="AutoServiceModel.Tag" Width="1.5" PointX="3" PointY="15.875" />
+        <EntityTypeShape EntityType="AutoServiceModel.Service" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="AutoServiceModel.ServicePhoto" Width="1.5" PointX="1.5" PointY="13.625" />
+        <EntityTypeShape EntityType="AutoServiceModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AutoServiceModel.Tag" Width="1.5" PointX="3" PointY="17.375" />
         <EntityTypeShape EntityType="AutoServiceModel.User" Width="1.5" PointX="10" PointY="0.875" />
         <AssociationConnector Association="AutoServiceModel.FK_Client_Gender" />
         <AssociationConnector Association="AutoServiceModel.FK_ClientService_Client" />
         <AssociationConnector Association="AutoServiceModel.FK_ClientService_Service" />
         <AssociationConnector Association="AutoServiceModel.FK_DocumentByService_ClientService" />
-        <AssociationConnector Association="AutoServiceModel.FK_ProductSale_ClientService" />
         <AssociationConnector Association="AutoServiceModel.FK_Product_Manufacturer" />
         <AssociationConnector Association="AutoServiceModel.FK_ProductPhoto_Product" />
-        <AssociationConnector Association="AutoServiceModel.FK_ProductSale_Product" />
         <AssociationConnector Association="AutoServiceModel.FK_User_Role" />
         <AssociationConnector Association="AutoServiceModel.FK_Service_ServicePhoto" />
         <AssociationConnector Association="AutoServiceModel.AttachedProduct" />
